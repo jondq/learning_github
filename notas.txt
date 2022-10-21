@@ -1,0 +1,11 @@
+#  Inicializacion basica de git y enlazar con un repo en github
+echo "# codebook" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/patrickmineault/codebook.git
+git push -u origin main
+
+# Cuando se quiere hacer push por primera vez y hay archivos remotos que no estan locales, mejor hacer un pull primero
+git pull origin master --allow-unrelated-histories
